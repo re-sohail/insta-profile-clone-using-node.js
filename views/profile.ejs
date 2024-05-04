@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= profileData.name %> (@<%= username%>)</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="/stylesheet/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="main w-[80%] mx-auto">
+        <div class="uper-part flex items-start justify-between">
+            <div class="left-part w-[30%] h-[50vh] flex items-center justify-center">
+                <img class="w-[160px] h-[160px] object-cover object-center rounded-[100px]" src="<%= profileData.pic %>" alt="">
+            </div>
+            <div class="right-part w-[70%] py-16 pl-10">
+                <div class="user-data flex items-center justify-start gap-4">
+                    <h1 class="text-2xl mr-6"><%= profileData.user %></h1>
+                    <button class="text-sm bg-[#EFEFEF] py-2 px-5 rounded-lg">Following <i class="ri-arrow-drop-down-line"></i></button>
+                    <button class="text-sm bg-[#EFEFEF] py-2 px-5 rounded-lg">Message</button>
+                    <p class="text-sm bg-[#EFEFEF] py-2 px-5 rounded-lg cursor-pointer"><i class="ri-user-add-line"></i></p>
+                    <p class="text-2xl cursor-pointer"><i class="ri-more-line"></i></p>
+                </div>
+                <div class="uer-post pt-10 flex items-center justify-start gap-10">
+                    <h1 class="text-lg"><%= profileData.post_no %> Posts</h1>
+                    <h1 class="text-lg"><%= profileData.followers %> Followers</h1>
+                    <h1 class="text-lg"><%= profileData.following %> Following</h1>
+                </div>
+                <h1 class="text-lg font-semibold pt-6"><%= profileData.name %></h1>
+                <p class="text-[16px] pt-6"><%= profileData.description%></p>
+            </div>
+        </div>
+        <div class="lower-part px-24 flex items-center justify-start gap-10 pb-10">
+            <div class="status flex items-center justify-center flex-col">
+                <img class="w-[80px] h-[80px] rounded-[50px] cursor-pointer" src="<%= profileData.status1 %>" alt="">
+                <p>Food</p>
+            </div>
+            <div class="status flex items-center justify-center flex-col">
+                <img class="w-[80px] h-[80px] rounded-[50px] cursor-pointer" src="<%= profileData.status2 %>" alt="">
+                <p>Travel</p>
+            </div>
+            <div class="status flex items-center justify-center flex-col">
+                <img class="w-[80px] h-[80px] rounded-[50px] cursor-pointer" src="<%= profileData.status3 %>" alt="">
+                <p>Meeting</p>
+            </div>
+            <div class="status flex items-center justify-center flex-col">
+                <img class="w-[80px] h-[80px] rounded-[50px] cursor-pointer" src="<%= profileData.status4 %>" alt="">
+                <p>Shoot time</p>
+            </div>
+            <div class="status flex items-center justify-center flex-col">
+                <img class="w-[80px] h-[80px] rounded-[50px] cursor-pointer" src="<%= profileData.status5 %>" alt="">
+                <p>Family</p>
+            </div>
+            <div class="status flex items-center justify-center flex-col">
+                <img class="w-[80px] h-[80px] rounded-[50px] cursor-pointer" src="<%= profileData.status6 %>" alt="">
+                <p>Coding Time</p>
+            </div>
+        </div>
+        <div class="post border-t-[2px] w-full flex items-center justify-center">
+            <div class="upper flex items-center justify-center gap-10 py-6">
+                <p class="uppercase text-lg font-medium"><i class="ri-grid-fill"></i> Post</p>
+                <p class="uppercase text-lg font-medium text-[#B9B9B9]"><i class="ri-film-line"></i> Reels</p>
+                <p class="uppercase text-lg font-medium text-[#B9B9B9]"><i class="ri-price-tag-3-line"></i> Tagged</p>
+            </div>
+        </div>
+        <div class="post-list w-full flex items-center justify-start gap-1 flex-wrap py-5">
+            <img class="w-[380px] h-[380px] object-center object-cover" src="<%= profileData.post1 %>" alt="">
+            <img class="w-[380px] h-[380px] object-center object-cover" src="<%= profileData.post2 %>" alt="">
+            <img class="w-[380px] h-[380px] object-center object-cover" src="<%= profileData.post3 %>" alt="">
+            <img class="w-[380px] h-[380px] object-center object-cover" src="<%= profileData.post4 %>" alt="">
+            <img class="w-[380px] h-[380px] object-center object-cover" src="<%= profileData.post5 %>" alt="">
+            <img class="w-[380px] h-[380px] object-center object-cover" src="<%= profileData.post6 %>" alt="">
+        </div>
+    </div>
+</body>
+</html>
